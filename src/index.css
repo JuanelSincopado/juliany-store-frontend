@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --black: #343434;
+  --gris: #535141;
+  --green: #1f8e0c;
+  --white: #fff;
+  --red: #e40000;
+  --yellow: #e8e87c;
+  --yellow2: #969647;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.category {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  width: fit-content;
+  padding: 8px 10px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.2s;
+  color: var(--black);
+}
+
+.category:hover {
+  background-color: var(--yellow2);
+  color: var(--white);
+}
+
+.category--selected {
+  background-color: var(--yellow2);
+  color: var(--white);
+}
+
+.whatsapp__button {
+  position: fixed;
+  bottom: 60px;
+  right: 180px;
+  transition: 0.2s;
+  border-radius: 50%;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  @media (max-width: 768px) {
+    right: 20px;
+    bottom: 20px;
+  }
+}
+
+.loader__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bigLoader {
+  width: 50px;
+  height: 50px;
+  border: 6px solid var(--yellow2);
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  margin-top: 200px;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.min__loader {
+  width: 30px;
+  height: 30px;
+  border: 5px solid var(--yellow2);
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  margin: 20px;
+}
+
+.loader {
+  width: 16px;
+  height: 16px;
+  border: 3px solid white;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.not-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  margin-top: 100px;
+  color: var(--gris);
+}
