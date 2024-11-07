@@ -23,18 +23,21 @@
   display: flex;
   gap: 20px;
   margin-top: 40px;
+  /* justify-content: center; */
   overflow: scroll;
   padding: 20px;
-  /* justify-content: center; */
+  white-space: nowrap; /* Evita los saltos de línea */
+  overflow-x: auto; /* Habilita el desplazamiento horizontal */
+  overflow-y: hidden; /* Oculta el desplazamiento vertical */
 
-  /* Firefox */
-  scrollbar-width: none; /* Oculta la barra de desplazamiento en Firefox */
+  /* Estilo de la barra de desplazamiento en Firefox */
+  scrollbar-width: auto; /* También puedes usar 'thin' */
 
   /* Internet Explorer 10+ */
   -ms-overflow-style: none;
 
   @media (min-width: 768px) {
-    justify-content: center;
+    /* justify-content: center; */
   }
 }
 
@@ -44,20 +47,22 @@
   gap: 20px;
   margin-top: 40px;
   justify-items: center;
+  padding: 20px;
 
   .card_item {
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
     cursor: pointer;
     transition: 0.2s;
-    width: 180px;
+    width: 200px;
+    height: 320px;
 
     &:hover {
       transform: scale(1.02);
     }
 
     img {
-      width: 180px;
+      width: 100%; /* Ocupa todo el ancho de la tarjeta */
       height: 200px;
       object-fit: cover;
       border-radius: 15px 15px 0 0;

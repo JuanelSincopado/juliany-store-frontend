@@ -45,7 +45,7 @@ const CardItem = ({ product }) => {
 
     const { price, country } = selectedCountry;
 
-    const currency = country === "Venezuela" ? "Bs." : "COP";
+    const currency = country === "Venezuela" ? "USD" : "COP";
 
     return `${currency} ${formatNumber(price)}`;
   };

@@ -23,7 +23,7 @@ const DetailsCountry = () => {
 
             <p className="price">
               {country.country === "Venezuela"
-                ? `Bs. ${formatNumber(country.price)}`
+                ? `USD ${formatNumber(country.price)}`
                 : `COP ${formatNumber(country.price)}`}
             </p>
           </div>

@@ -1,7 +1,7 @@
 const WhatsappFloatButton = () => {
   return (
     <a
-      href="https://wa.me/+573012625435"
+      href="https://wa.me/+584121866515"
       className="whatsapp__button"
       target="_blank"
     >
